@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(cors({
-  origin:"https://soicalbuyer-13m9.vercel.app",
+  origin:"http://riyadhsouq.com",
   methods:"GET,POST,PUT,DELETE",
   credentials:true
 }));
