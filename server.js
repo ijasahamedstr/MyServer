@@ -59,8 +59,6 @@ export default function handler(req, res) {
       return;
   }
 
-  // Handle your request here
-  res.json({ message: 'Hello from Vercel!' });
 }
 
 
