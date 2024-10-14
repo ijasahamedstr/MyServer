@@ -3,18 +3,18 @@ import AccountRegister from "../models/AccountRegister.models.js";
 
 // Configure Nodemailer transport
 const transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
+    host: "mail.brainiacs.edu.lk",
+    port: 465,
     auth: {
-        user: "d7de0c14b2a4bf",
-        pass: "753419f7c0a3ee"
+        user: "test@brainiacs.edu.lk",
+        pass: "Rock@8696"
     }
 });
 
 // Helper function to send email
 const sendEmail = async (to, otp) => {
     const mailOptions = {
-        from: "no-reply@example.com", // Change this to your email
+        from: "test@brainiacs.edu.lk", // Change this to your email
         to,
         subject: "OTP Validation",
         text: `Your OTP is: ${otp}`
