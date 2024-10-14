@@ -169,8 +169,8 @@ app.get('/api/twitter-info/:username', async (req, res) => {
 
 
 /* ************************************************************* */
-// Replace with your actual Instagram API access
-const INSTAGRAM_ACCESS_TOKEN = 'IGQWROejNZATk14RWtSLWItZAmlwcU9sN1pIa0pQUXZA4WEdiT0tudndPRGNPOW1tdUZAYOWItTmhFMFhLNkxMVE1lSV9CeFRLLUR4THE1SFp6VGNaYjFOdjN6VERQTzJydzBsRzlPRzNnRHN6YXo3bEptc2ZAVYTRHMFUZD';
+// Instagram API access token
+const INSTAGRAM_ACCESS_TOKEN = 'YOUR_INSTAGRAM_ACCESS_TOKEN';
 
 app.get('/api/instagram-info', async (req, res) => {
   const { username } = req.query;
@@ -181,7 +181,6 @@ app.get('/api/instagram-info', async (req, res) => {
 
   try {
     const response = await axios.get(`https://graph.instagram.com/v1/users/${username}?access_token=${INSTAGRAM_ACCESS_TOKEN}`);
-    
     const userInfo = {
       id: response.data.id,
       username: response.data.username,
