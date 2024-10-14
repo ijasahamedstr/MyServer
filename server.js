@@ -168,10 +168,6 @@ app.get('/api/twitter-info/:username', async (req, res) => {
 /********************************************************************************* */
 
 
-
-
-
-
 app.get('/', (req, res) => {
    res.send("Hello world!");
 });

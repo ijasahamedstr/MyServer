@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 // Helper function to send email
 const sendEmail = async (to, otp) => {
     const mailOptions = {
-        from: "mail@pronisha.com", // Change this to your email
+        from: "no-reply@example.com", // Change this to your email
         to,
         subject: "OTP Validation",
         text: `Your OTP is: ${otp}`
