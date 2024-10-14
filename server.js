@@ -48,20 +48,6 @@ app.use(cors({
 }));
 
 
-export default function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allowed methods
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allowed headers
-
-  if (req.method === 'OPTIONS') {
-      // Respond to preflight requests
-      res.status(200).end();
-      return;
-  }
-
-}
-
-
 //Data understanding middleware
 app.use(express.json());
 
