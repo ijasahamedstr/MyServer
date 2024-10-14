@@ -48,11 +48,20 @@ app.use(cors({
 }));
 
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // or specify a specific origin
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allowed methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allowed headers
+
+  if (req.method === 'OPTIONS') {
+      // Respond to preflight requests
+      res.status(200).end();
+      return;
+  }
+
+  // Handle your request here
+  res.json({ message: 'Hello from Vercel!' });
+}
 
 
 //Data understanding middleware
